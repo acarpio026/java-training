@@ -1,0 +1,99 @@
+﻿* {
+    overflow: hidden
+}
+
+canvas {
+    position: absolute
+}
+
+body {
+    background-image: url('../../images/cover.jpg');
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+
+.login-box {
+    width: 460px;
+}
+
+.login-box-body {
+    background: #fff;
+    padding: 40px;
+    color: #666
+}
+
+
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.container-login100 {
+    margin-top: -10px;
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.wrap-login100 {
+    width: 580px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 55px 55px 55px 55px;
+    background-color: white;
+}
+
+
+.login100-form {
+    width: 100%;
+}
+
+.login100-form-logo {
+    font-size: 30px;
+    color: #333333;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 100px;
+    background-image: url('../../images/tsilogo.png');
+    background-size: contain; /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0 auto;
+}
+
+
+.login100-form-title {
+    /* font-family: Poppins-Medium; */
+    font-size: 30px;
+    color: rgb(40, 9, 177);
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+}
+
+.modal.fade.in{
+    top: 25% !important;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+</head>
+
+<body>
+    <!-- Modal -->
+    <div th:fragment="modal(id)" class="modal fade" th:id="${id}" tabindex="-1" role="dialog"
+        aria-labelledby="todoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 100%;">
+
+            <div class="modal-header">
+                <div class="form-group">
+                    <h3 class="modal-title" id="todoModalLabel" style="float: left;">Register</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body" style="padding: 30px; padding-bottom: 50px !important;">
+
+                <form th:action="@{~/api/user/}" id="frmRegistration" method="post">
+
+                    <div class="form-horizontal">
+
+                        <input type="hidden" id="hUserId" name="userId" value="0" />
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="txtUsername">Username</label>
+                            <div class="col-md-9">
+                                <input class="form-control text-box single-line" data-val="true"
+                                    data-val-required="Invalid or empty Username" id="txtUsername" name="username"
+                                    type="text" value="">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="txtPassword">Password</label>
+                            <div class="col-md-8">
+                                <input class="form-control text-box single-line" data-val="true"
+                                    data-val-required="Invalid or empty Password" id="txtPassword" name="password"
+                                    type="password" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="chkIsActive">Status</label>
+                            <div class="col-md-8">
+                                <input id="chkIsActive" type="checkbox" checked data-toggle="toggle" data-on="Active"
+                                    data-off="InActive" data-onstyle="success" data-offstyle="danger" data-width="125"
+                                    data-height="30" data-size="mini" name="active">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btnSaveCustomer">Save
+                    Changes</button>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

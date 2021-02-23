@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="EN" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <meta name="viewport" content="width=device-width">
+
+    <link th:rel="stylesheet" th:href="@{~/webjars/bootstrap/3.4.1/css/bootstrap.min.css}" />
+    <link th:rel="stylesheet" th:href="@{~/webjars/bootstrap-modal/2.2.5/css/bootstrap-modal.css}" />
+    <link th:rel="stylesheet" th:href="@{~/webjars/bootstrap-modal/2.2.5/css/bootstrap-modal-bs3patch.css}" />
+    <link th:rel="stylesheet" th:href="@{~/webjars/font-awesome/4.7.0/css/font-awesome.min.css}" />
+    <link th:rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
+    <link th:rel="stylesheet" th:href="@{~/webjars/toastr/2.1.2/build/toastr.min.css}" />
+    <link th:rel="stylesheet" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" >
+
+
+    <link th:rel="stylesheet" th:href="@{~/styles/site.css}" />
+    <link th:rel="stylesheet" th:href="@{~/styles/todo.css}" />
+
+    <title>Java Bootcamp Todo Exercise</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <table id="topLabelWrapper" style="width: 100%;">
+                <tr>
+                    <td style="text-align: left; vertical-align: top; width: 100%;">
+                        <h3>I have to do this stuff: </h3>
+                    </td>
+                    <td style="text-align: right; padding-top: 15px;">
+                        <input id="chkIncludeDone" type="checkbox" checked data-toggle="toggle" data-on="Include Done" data-off="Exclude Done" 
+                            data-onstyle="success" data-offstyle="danger" data-width="125" data-height="30" data-size="mini">
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td style="text-align: right; padding-top: 15px;">
+                        <button type="button" class="btn btn-primary" th:onclick="'javascript:newTodo()'">Add Todo</button>
+                    </td>
+                </tr>
+            </table>
+
+            <div id="contentWrapper">
+                <th:block th:replace="todo/_list :: todoList">modal</th:block>
+            </div>
+
+
+            <th:block th:replace="todo/_modal :: modal('todoModal')">modal</th:block>
+
+        </div>
+
+    </div>
+
+    <script th:src="@{~/webjars/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{~/webjars/bootstrap/3.4.1/js/bootstrap.min.js}"></script>
+    <script th:src="@{~/webjars/bootstrap-modal/2.2.5/js/bootstrap-modal.js}"></script>
+    <script th:src="@{~/webjars/bootstrap-modal/2.2.5/js/bootstrap-modalmanager.js}"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script th:src="@{~/webjars/toastr/2.1.2/build/toastr.min.js}"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+    <script th:src="@{~/scripts/common.js}"></script>
+    <script th:src="@{~/scripts/todo.js}"></script>
+    
+</body>
+
+</html>

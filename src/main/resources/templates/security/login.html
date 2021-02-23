@@ -1,0 +1,109 @@
+<html style=""
+    class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <meta name="viewport" content="width=device-width">
+
+    <link th:rel="stylesheet" th:href="@{~/webjars/bootstrap/3.4.1/css/bootstrap.min.css}" />
+    <link th:rel="stylesheet" th:href="@{~/webjars/bootstrap-modal/2.2.5/css/bootstrap-modal.css}" />
+    <link th:rel="stylesheet" th:href="@{~/webjars/bootstrap-modal/2.2.5/css/bootstrap-modal-bs3patch.css}" />
+    <link th:rel="stylesheet" th:href="@{~/webjars/font-awesome/4.7.0/css/font-awesome.min.css}" />
+    <link th:rel="stylesheet" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" >
+    <link th:rel="stylesheet" th:href="@{~/webjars/toastr/2.1.2/build/toastr.min.css}" />
+
+    <link th:rel="stylesheet" th:href="@{~/styles/site.css}" />
+    <link th:rel="stylesheet" th:href="@{~/styles/login.css}" />
+
+    <title>Java Bootcamp Todo Exercise</title>
+
+</head>
+
+<body class="hold-transition login-page">
+
+    <div id="particles-js">
+
+        <canvas class="particles-js-canvas-el" width="1920" height="510" style="width: 100%; height: 100%;"></canvas>
+    </div>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+
+                <form th:action="@{~/security/login}" class="login100-form validate-form" id="frmLogin" method="post"
+                    novalidate="novalidate"> <span class="login100-form-logo">
+                        <i class="zmdi zmdi-landscape"></i>
+                    </span>
+                    <span class="login100-form-title p-b-34 p-t-27">Todo Exercise</span>
+                    <br/><br/>
+                    <div>
+
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="username">Username</label>
+                            <div class="col-md-9">
+                                <input class="form-control text-box single-line" data-val="true"
+                                    data-val-required="Invalid or empty username" id="username" name="username"
+                                    type="text" value="">
+                                <span class="field-validation-valid text-danger" data-valmsg-for="username"
+                                    data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="password">Password</label>
+                            <div class="col-md-8">
+                                <input class="form-control text-box single-line" data-val="true"
+                                    data-val-required="Invalid or empty Password" id="password" name="password"
+                                    type="password" value="">
+                                <span class="field-validation-valid text-danger" data-valmsg-for="password"
+                                    data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="text-center">
+                                <input type="submit" value="Login" class="btn btn-success">
+                            </div>
+                            
+                            <div class="text-center" >
+                                <br/>
+                                <span style="font-size: 10pt; font-style: italic;">Not existing users?, 
+                                    <a href="#" id="btnRegister">register</a>
+                                </span>                                
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div th:if="${usercount<1}">
+        <th:block th:replace="_shared/_userRegistration :: modal('userRegistration')">modal</th:block>                
+    </div>
+
+
+
+
+    <script th:src="@{~/webjars/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{~/webjars/jquery.serializeJSON/2.9.0/jquery.serializejson.min.js}"></script>
+    <script th:src="@{~/webjars/bootstrap/3.4.1/js/bootstrap.min.js}"></script>
+    <script th:src="@{~/webjars/modernizr/2.8.3/modernizr.min.js}"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script th:src="@{~/webjars/toastr/2.1.2/build/toastr.min.js}"></script>
+
+    <script th:src="@{~/scripts/particles.js}"></script>
+    <script th:src="@{~/scripts/cover.js}"></script>
+    <script th:src="@{~/scripts/common.js}"></script>
+
+    <script th:src="@{~/scripts/user.js}"></script>
+
+</body>
+
+</html>

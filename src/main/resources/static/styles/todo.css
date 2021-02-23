@@ -1,0 +1,96 @@
+.done {
+    text-decoration:line-through;
+}
+
+.icon{
+    text-align:right;
+}
+
+span.fa-stack{
+    line-height: 0em !important;
+    width: 1.5em !important;
+}
+span>.fa{
+	border-radius: 50%;
+	/* background:#b4b4b4; */
+}
+span>.fa:hover{
+	color: #EA6212;
+}
+
+
+.todoList {
+    /* font-family: 'Bradley Hand ITC' !important; */
+    font-size: 12pt !important;
+    position: relative;
+    min-height: 280px;
+    display: inline-block;
+    margin: 1em;
+    padding: 8px;
+    text-align: center;
+    -moz-box-shadow: 10px 10px 9px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 10px 10px 9px rgba(0, 0, 0, 0.22);
+    box-shadow: 10px 10px 9px rgba(0, 0, 0, 0.22);
+    background-color: #ffc !important;
+    vertical-align: top;
+    width: 100%;
+}
+
+.todoList:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 0 0 24px 24px;
+    border-style: solid;
+    border-color: #f6f6c7 #fff;
+}
+
+.todoList{
+    padding: 40px !important;
+}
+
+table#tblTodo>tbody>tr>td, 
+table#tblTodo>tbody>tr>th, 
+table#tblTodo>tfoot>tr>td, 
+table#tblTodo>tfoot>tr>th, 
+table#tblTodo>thead>tr>td, 
+table#tblTodo>thead>tr>th {
+    border: 0px !important;
+}
+
+table#tblTodo,
+table#tblTodo tr
+table#tblTodo td
+{
+    border: none !important;
+    border: none !important;
+    border: none !important;
+    
+}
+
+tr>td>.form-group{
+    text-align: left !important;
+}
+tr>td>.form-group>p{
+    margin-bottom: 0pt !important;
+}
+
+
+/* OVERRIDES */
+table.dataTable thead tr{
+    height: 0px;
+    font-size: 0pt !important;
+}
+table.dataTable tbody tr{
+    background-color: transparent !important;
+}
+.dataTables_length{
+    font-size: 10pt !important;
+}
+.dataTables_filter{
+    font-size: 10pt !important;
+}
+.dataTables_paginate{
+    font-size: 10pt !important;
+}

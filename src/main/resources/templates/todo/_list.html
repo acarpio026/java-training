@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+</head>
+
+<body>
+
+    <div th:fragment="todoList" class="todoList">
+        <table class="table table-borderless" id="tblTodo">
+            <thead>
+                <tr>
+                    <td style="width: 100px !important;">&nbsp;</td>
+                    <td style="width: 35px !important;">&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-th-each="todo : ${todos}" >
+                    <td scope="row">
+                        <div class="icon" th:style="${todo.isDone ? 'display:none' : ''}">
+                            <span class="fa-stack" aria-hidden="true" title="Delete"
+                                th:onclick="'javascript:todoItemDelete(' + ${todo.todoId} + ')'">
+                                <i class="fa fa-trash-o fa-sm"></i>
+                            </span>
+                            <span class="fa-stack btnTodoDelete" aria-hidden="true" title="Update">
+                                <i class="fa fa-wrench fa-sm"></i>
+                            </span>
+                        </div>
+
+                    </td>
+                    <td> 
+                        <input type="checkbox" th:checked="${todo.isDone}" th:value="${todo.todoId}" class="isDoneToggle" />
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <p th:classappend="${todo.isDone} ? 'done'">[[${todo.todoDescription}]]</p>
+                            <span style="font-size: 10pt; font-style: italic;"
+                                th:text="${'Modified On : ' + #temporals.format(todo.modifiedOn, 'yyyy-MM-dd HH:mm:ss')}">
+                            </span>
+                        </div> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

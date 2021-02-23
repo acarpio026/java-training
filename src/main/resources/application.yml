@@ -1,0 +1,39 @@
+# application.yml
+
+#custom
+#disable at this time
+#unable to distribute tsi-cryptocraphy without authorization
+app:
+    datasource:
+        username: bniajQBWMiKVztNUVQS8Ng==
+        password: Zhazj6lV0UgI+g6ZDcO54Q==
+
+server:
+    port: 8625
+
+#spring configuration
+spring:   
+    datasource:
+        url: jdbc:sqlserver://TSI-LAP404-1\\SQL2016;database=TodoExercises;port=1433
+        driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        hikari:            
+            username: 
+            password: 
+            minimum-idle: 1
+            maximum-pool-size: 10
+            pool-name: hikariConnectionPool
+            auto-commit: false
+            cachePrepStmts: true
+            repStmtCacheSize: 250
+            prepStmtCacheSqlLimit: 2048
+        jpa:
+            show-sql: true
+            generate-ddl: true
+            hibernate:
+                ddl-auto: none
+                naming:
+                    physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+                    implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+            properties:
+                hibernate:
+                    dialect: org.hibernate.dialect.SQLServerDialect
